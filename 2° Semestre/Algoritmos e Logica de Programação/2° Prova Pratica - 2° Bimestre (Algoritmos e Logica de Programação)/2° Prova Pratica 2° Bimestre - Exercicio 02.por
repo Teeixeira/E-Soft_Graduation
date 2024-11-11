@@ -33,4 +33,3 @@ programa {
     retorne soma / tamanho
   }
 }
-
