@@ -10,34 +10,57 @@
 </head>
 
 <body>
-  <nav>
-    Dashboard
-  </nav>
+  <header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <img src="https://cdn2.steamgriddb.com/icon/e1bd06c3f8089e7552aa0552cb387c92/32/256x256.png" alt="" width="32px">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 ps-1">
+          <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>  
+          <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
+        </form>
+
+        <div class="text-end">
+          <button type="button" class="btn btn-outline-light me-2">Login</button>
+          <button type="button" class="btn btn-warning">Sign-up</button>
+        </div>
+      </div>
+    </div>
+  </header>
 
 
   <div class="container">
-    <div class="row align-items-start">
+    <div class="row align-items-start mt-2">
       <div class="col-4">
-        <div class="card" style="background-color: #ff471a;">
+        <div class="card text-bg-danger">
           <div class="card-body">
             <img class="w-100"
-              src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmlxcGJlbmQyZ2tvbHFoNzRpZWYyd3ZqbzFndzVhd2Q1eWVnd2t3ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nrXif9YExO9EI/giphy.gif">
+              src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHA4MTZudHhmaXZnemp1cXNyMTl2ZmVscDF0dzN4dWFkaHE3NmNqayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUOxfpgOOXYNPL0wE0/giphy.gif">
           </div>
         </div>
       </div>
       <div class="col-4">
-        <div class="card" style="background-color: #751aff;">
+        <div class="card text-bg-primary">
           <div class="card-body">
             <img class="w-100"
-              src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmlxcGJlbmQyZ2tvbHFoNzRpZWYyd3ZqbzFndzVhd2Q1eWVnd2t3ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nrXif9YExO9EI/giphy.gif">
+              src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbm0xazk4bjFkZ3NkcXp1cGx2ZGN6aXVjbTd1OGtieThsNjhuMmMzZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6urGFMNHU5pF4cLIUW/giphy.gif">
           </div>
         </div>
       </div>
       <div class="col-4">
-        <div class="card" style="background-color: #ff9900;">
+        <div class="card text-bg-warning">
           <div class="card-body">
             <img class="w-100"
-              src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmlxcGJlbmQyZ2tvbHFoNzRpZWYyd3ZqbzFndzVhd2Q1eWVnd2t3ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nrXif9YExO9EI/giphy.gif">
+              src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTF5bXlwNGNqZDkyNWZlNHlpZHZqMG93czBkaTlydjV4bzVlemEwdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0xeojQleC47GaJZm/giphy.gif">
           </div>
         </div>
       </div>
@@ -45,48 +68,59 @@
 
     <div class="row align-items-start">
       <div class="col-4">
-        <div class="card" style="background-color: #ff471a;">
+        <div class="card text-bg-danger">
           <div class="card-body">
-            <h2>Junin Auto Peças</h2>
-            <ul>
-              <li>Tipo: Auto Peças</li>
-              <li>Cidade: Mandaguari</li>
-              <li>Estado: Paraná</li>
-              <li>Bairro: Jardim Oasis</li>
-            </ul>
-            <a href=""><button class="w-100 btn btn-primary btn-sm">Detalhes</button></a>
+            <div class="card">
+              <div class="card-body">
+                <h2>Awp</h2>
+                <ul>
+                  <li>Tipo: Sniper Rifle</li>
+                  <li>Magazine: 5 Bullets</li>
+                  <li>Recoil: Very High</li>
+                  <li>Price: $4750</li>
+                </ul>
+                <a href="./detalhes.html"><button class="w-100 btn btn-danger btn-sm">Detalhes</button></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-4">
-        <div class="card" style="background-color: #751aff;">
+        <div class="card text-bg-primary">
           <div class="card-body">
-            <h2>Concessionaria Kawasaki</h2>
-            <ul>
-              <li>Tipo: Concessionaria</li>
-              <li>Cidade: Maringá</li>
-              <li>Estado: Paraná</li>
-              <li>Bairro: Jardim Universitario</li>
-            </ul>
-            <a href=""><button class="w-100 btn btn-primary btn-sm">Detalhes</button></a>
+            <div class="card">
+              <div class="card-body">
+                <h2>Rifle</h2>
+                <ul>
+                  <li>Tipo: Assault Rifle</li>
+                  <li>Magazine: 20 - 30 Bullets</li>
+                  <li>Recoil: High</li>
+                  <li>Price: $2700 - $2900</li>
+                </ul>
+                <a href="./detalhes.html"><button class="w-100 btn btn-primary btn-sm">Detalhes</button></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="col-4">
-        <div class="card" style="background-color: #ff9900;">
+        <div class="card text-bg-warning">
           <div class="card-body">
-            <h2>Paraná Motos</h2>
-            <ul>
-              <li>Tipo: Peças e Serviços</li>
-              <li>Cidade: Sarandi</li>
-              <li>Estado: Paraná</li>
-              <li>Bairro: Centro</li>
-            </ul>
-            <a href=""><button class="w-100 btn btn-primary btn-sm">Detalhes</button></a>
+            <div class="card">
+              <div class="card-body">
+                <h2>Desert Eagle</h2>
+                <ul>
+                  <li>Tipo: Pistol</li>
+                  <li>Magazine: 7 Bullets</li>
+                  <li>Recoil: Very High</li>
+                  <li>Price: $700</li>
+                </ul>
+                <a href="./detalhes.html"><button class="w-100 btn btn-warning btn-sm">Detalhes</button></a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
   </div>
 
