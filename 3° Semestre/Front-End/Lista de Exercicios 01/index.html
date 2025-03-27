@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
   </head>
-  <body>
+  <body class="colorbackground">
     <!-- <h1>
         <ul>
             <li>Arroz</li>
@@ -73,7 +74,7 @@
 
             </tbody>
         </table> -->
-    </h3>
+    <!-- </h3> -->
 
     <!-- <h4>
         <table>
@@ -107,44 +108,110 @@
         </table>
     </h4> -->
 
-    <h5>
-        <style>
-            span{
-                color: red;
-            }
-        </style>
-
+    <!-- <h5>
         <div class="container">
             <div class=" card">
                 <div class="card-body">
-
                     <form>
-                        <label>Nome Completo <span>*</span></label>
-                        <div>
+                        <label class="margembottom">Nome Completo <span>*</span></label>
+                        <div class="margembottom">
                             <input class="form-control" type="text" placeholder="Digite seu nome">
                         </div>
 
-                        <label>Endereço*</label>
-                        <div>
-                            <input class="form-control" type="text" placeholder="Digite seu endereço">
+                        <label class="margembottom">E-mail <span>*</span></label>
+                        <div class="margembottom">
+                            <input class="form-control" type="text" placeholder="Digite seu e-mail">
                         </div>
 
-                        <label>Idade*</label>
-                        <div>
-                            <input class="form-control" type="text" placeholder="Digite sua idade">
+                        <label class="margembottom">Deixe sua mensagem <span>*</span></label>
+                        <div class="margembottom">
+                            <input class="form-control" type="text" placeholder="...">
                         </div>
-
-                        <label>Sexo*</label>
-                        <div>
-                            <input class="form-control" type="radio">
-                        </div>
-
                     </form>
                 </div>
             </div>
         </div>
-    </h5>
+    </h5> -->
 
+    <!-- <h6>
+        <div class="container margemtop">
+            <img class="banner" src="https://media.discordapp.net/attachments/1352257245374840946/1354822858647404734/banner.gif?ex=67e6b09c&is=67e55f1c&hm=f36b50e70e02b86ed495dff9e1263301ddc435bfbb5f38d5488603295103afb8&=">
+            <div class=" card">
+                <div class="card-body">
+                    <form>
+                        <label class="margembottom">Nome Completo <span>*</span></label>
+                        <div class="margembottom">
+                            <input class="form-control" type="text" placeholder="Digite seu nome">
+                        </div>
 
+                        <label class="margembottom"> Selecione o País <span>*</span></label>
+                        <div class="margembottom">
+                            <select class="form-control">
+                                <option value="Escolha">-</option>
+                                <option value="brasil">Brasil</option>
+                                <option value="eua">Estados Unidos</option>
+                                <option value="franca">França</option>
+                                <option value="argentina">Argentina</option>
+                                <option value="inglaterra">Inglaterra</option>
+                            </select>
+                        </div>
+
+                        <label class="margembottom">E-mail <span>*</span></label>
+                        <div class="margembottom">
+                            <input class="form-control" type="text" placeholder="Digite seu e-mail">
+                        </div>
+
+                        <label class="margembottom">Senha <span>*</span></label>
+                        <div class="margembottom">
+                            <input class="form-control" type="password" placeholder="Digite sua senha">
+                        </div>
+
+                        <label class="margembottom">Deixe sua mensagem <span>*</span></label>
+                        <div class="margembottom">
+                            <input class="form-control" type="text" placeholder="...">
+                        </div>
+
+                        <label class="margembottom">Selecione seu Sexo <span>*</span></label>
+                        <div class="margembottom">
+                            <input type="radio" name="sexo" value="masculino"> Masculino
+                            <input type="radio" name="sexo" value="feminino"> Feminino
+                            <input type="radio" name="sexo" value="outro"> Outro
+                        </div>
+                    </form>
+                    <div>
+                        <a href="https://www.google.com/search?q=tibia%2C+o+melhor+jogo+do+mundo" target="_blank" class="btn btn-warning margemtop">Tibia</a>
+                    </div>
+                    <div>
+                        <a href="https://www.google.com/search?q=tibia%2C+o+melhor+jogo+do+mundo" class="btn btn-danger margemtop">Tibia</a>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary margemtop">Enviar</button>
+                    </div>
+                </div>
+            </div>
+            <a href="https://www.google.com" target="_blank"><img class="margemtop" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/250px-Google_2015_logo.svg.png"></a>
+        </div>
+    </h6> -->
+
+    <h7>
+        <nav class="textocentralizado margemtop margembottom"><b>Guia Básico de Como Farmar no Tibia</b></nav>
+        <div class="container">
+            <div class="card margembottom borda1">
+                <div class="card-body espaco">
+                    <h1 class="textblue">
+                        <p class="text14 espacomargin">Farmar no Tibia é uma das principais atividades do jogo, essencial para obter itens, ouro e experiência. Para começar, escolha uma área de treinamento ou caçadas que se adapte ao seu nível e à sua classe. Se você é iniciante, procure caçar monstros de baixo nível, como ratos e kobolds, que são fáceis de matar e geram bons recursos. Conforme sua habilidade e nível aumentam, você pode ir para áreas mais desafiadoras, como dungeons ou bosses, que oferecem loot mais valioso. Lembre-se de que farmar eficazmente requer equipamentos adequados, como poções de cura e mana, para garantir que você sobreviva a longas sessões de caça.</p>
+                        <p class="text16 espacomargin">A escolha do local de farm depende não apenas do seu nível, mas também da demanda por recursos. Por exemplo, se você deseja farmar ouro, procure monstros que deixam uma boa quantidade de moedas, como orcs ou trolls. Já para materiais de crafting, monstros como golems ou dragon lords podem ser mais vantajosos, pois soltam itens valiosos, como essências e gems. Ao farmar, sempre leve em conta o custo-benefício da caça: se você gastar muitas poções e recursos, pode não valer a pena o lucro obtido.</p>
+                        <p class="textred text18 espacomargin">Uma parte importante do farming é o gerenciamento de tempo e recursos. Utilize a função de "auto-target" para otimizar suas caçadas e sempre mantenha um bom estoque de poções e itens de suporte. Além disso, não se esqueça de vender itens em excesso para outros jogadores ou em lojas de NPC para maximizar seus lucros. Com paciência e a escolha correta de atividades, o farming no Tibia pode ser uma fonte constante de recursos e uma forma eficaz de aumentar seu poder no jogo.</p>
+                    </h1>
+                    <div>
+                        <a target="_blank" href="https://www.tibia.com/news/?subtopic=latestnews&interaction=already_registered_clicked&lpv=5" class="w-100 btn btn-primary">Acesse o site AQUI!</a>
+                    </div>
+                </div>
+            </div>
+            <img class="bannertibia" src="https://www.cipsoft.com/images/Header/header_spiele_tibia_DE.png">
+        </div>
+    </h7>
+
+    <script src="script.js"></script>
   </body>
 </html>
