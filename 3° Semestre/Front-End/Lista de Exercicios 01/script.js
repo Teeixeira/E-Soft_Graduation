@@ -76,3 +76,45 @@
 //     maior = num3
 // }
 // console.log("Maior numero: "+maior)
+
+// let i = 1
+// do {
+//     console.log(i)
+//     i++
+// } while (i <= 10)
+
+// let num = Number(prompt("Insira um número: "))
+
+// function verificaNum(){
+//     if (num < 10){
+//         num = Number(prompt("Insira um número novamente: "))
+//         verificaNum()
+//     } else {
+//         console.log(num+" é maior que 10!")
+//     } 
+// } 
+
+// verificaNum()
+
+// for (let i = 0; i <= 10; i++){
+//     for (let j = 0; j <= 10; j++){
+//         console.log(i + " x " + j + " = "+ i * j)
+//     }
+// }
+
+// let i = 0, soma = 0
+// while (i <= 100){
+//     soma = soma + i
+//     console.log("Valor atual "+ soma)
+//     i ++
+// } 
+
+// let i = 0
+// while (i <= 50){
+//     if(i % 2 === 0){
+//         console.log(i)
+//     }
+//     i ++
+// }
+
+const array = []
