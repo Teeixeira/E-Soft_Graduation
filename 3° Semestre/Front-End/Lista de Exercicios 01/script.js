@@ -117,4 +117,18 @@
 //     i ++
 // }
 
-const array = []
+// const array = [5, 10, 15, 20, 25]
+// for(let i = 0; i < array.length; i++){
+//     console.log(array[i])
+// }
+
+// let nomes = ['Leonardo', 'Rafael', 'Matheus', 'Vinicius', 'Baruch']
+// console.log(nomes[0])
+// console.log(nomes[4])
+
+// let nomes = ['Leonardo', 'Rafael', 'Matheus', 'Vinicius', 'Baruch']
+// console.log(nomes[0])
+// console.log(nomes[4])
+// nomes.push('Amanda') //.push para incluir um elemento ao final do array e .unshift para incluir no primeiro elemento
+// console.log(nomes[5])
+
