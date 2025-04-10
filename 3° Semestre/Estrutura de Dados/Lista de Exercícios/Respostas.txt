@@ -1,0 +1,51 @@
+1) O que uma variável de ponteiro armazena?
+R: Armazena o endereço de memoria de uma variável
+
+2) Qual o tamanho (em bytes) de uma variável de ponteiro int e de uma variável de ponteiro char?
+R: Depende do compilador, se for de 32 bits é 4 bytes, se for de 64 bits é 8 bytes
+
+3) Por qual motivo uma variável de ponteiro, ao ser apresentado o seu conteúdo ao usuário, pode  mostrar  0060FEF0 ou 000000000060FEF0? 
+R: Isso varia por conta do compilador ser 32bits ou 64 bits, podendo variar o tamanho do endereço de memoria
+
+4) Em qual área da memória serão alocadas as variáveis de ponteiro?
+R: Elas ficam armazenadas no stack
+
+5) Em qual área da memória são alocados blocos de memória para uma alocação dinâmica?
+R: Fica armazenado no Heap da memoria
+
+6) Considerando o programa desenvolvido em linguagem C abaixo, e sabendo que o endereço de memória  da  variável  x  é  0060FF24  e  o  da  variável  ponteiro  *ptr_x  é  0060FF20,  qual  será  o  resultado exibido ao usuário após a execução do comando printf("%d",*ptr_x);  na linha5?
+R: Será apresentado o valor de X = 22
+
+7) Sobre  a  questão  anterior,  o  que  seria  apresentado  ao  usuário  após  a  execução  do  comando  printf("%p",ptr_x);  na linha 5?
+R: Será apresentando o endereço de memoria de x
+
+8) Ainda  sobre  a  questão  6,  o  que  seria  apresentado  ao  usuário  após  a  execução  do  comando  printf("%p",&ptr_x);  na linha 5?
+R: Será apresentando o endereço de memoria do ponteiro "ptr_x"
+
+9) Também sobre a questão 6, o que seria apresentado ao usuário após a execução do comando  printf("%p",&*ptr_x);  na linha 5?
+R: Vai ser apresentado o endereço de memoria para qual o ponteiro está apontando, nesse caso de x
+
+10) Finalmente  sobre  a  questão  6,  o  que  seria  apresentado  ao  usuário  após  a  execução  do 
+comando printf("%d",  x); na linha 5?
+R: Seria apresentado o valor de X = 22
+
+11) Qual o tipo que um ponteiro deve ser declarado? Explique.
+R: O ponteiro deve ser declarado conforme o tipo de variavel que ele vai armazenar, para garantir que o acesso da memoria ocorra com sucesso
+
+12) Embora não recomendado, ao declararmos um ponteiro como void, o que será necessário para apresentar o valor ao qual ele está apontando?
+R: vamos precisar converter o ponteiro para um tipo adequado, confrome o qual for utilizar, para podermos manipular os dados
+
+13) Analisando o código abaixo desenvolvido em linguagem C, apresente o que será apresentado ao usuário após sua execução e justifique sua resposta.
+R: O resultado vai ser imprevisivel, pois como o ponteiro não foi apontado para nada ainda, ele só está atribuido a um endereço de memoria, que pode vim com a memoria limpa e o valor de 0, ou com lixo de memoria com o seu conteudo imprevisivel
+
+14) Analisando o código abaixo desenvolvido em linguagem C, apresente o que será apresentado ao usuário após sua execução. Justifique sua resposta
+R: vai ser apresentado o valor 51, pois *ptr_x = 51 está atribuido o valor "51" ao endereço em que o ponteiro está apontando.
+
+15) Analisando o código abaixo desenvolvido em linguagem C, apresente o que será apresentado ao usuário após sua execução. Justifique sua resposta 
+R: No primeiro printf será apresentado o valor de x que é igual a 100, já para o segundo printf será apresentado o valor de y, que será de 200, pois entre os printf o ponteiro foi declaro igual ao endereço de memoria do y
+
+16) Qual o objetivo da função sizeof utilizando em lin guagem C? Explique e dê um exemplo.
+R: o sizeof é uma função em que calcula quanto bytes a variavel, tipo, struct ou elemento está ocupando de memoria, por exemplo sizeof(int) vai retornar um valor de 4 bytes, que é o tamanho que o tipo int ocupa de memoria
+
+17) Considerando  o  código  abaixo  desenvolvido  em  lin guagem  C  em  um  compilador  de  64bits, apresente o que será apresentado ao usuário após sua execução. Justifique sua resposta
+R: Será exibido o valor de 12 bytes, pois a variavel por ser do tipo int consome 4 bytes e o ponteiro independente do tipo sempre vai consumir 8 bytes em compiladores 64 bits
