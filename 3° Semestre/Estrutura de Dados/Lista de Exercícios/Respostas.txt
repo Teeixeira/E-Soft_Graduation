@@ -49,3 +49,39 @@ R: o sizeof é uma função em que calcula quanto bytes a variavel, tipo, struct
 
 17) Considerando  o  código  abaixo  desenvolvido  em  lin guagem  C  em  um  compilador  de  64bits, apresente o que será apresentado ao usuário após sua execução. Justifique sua resposta
 R: Será exibido o valor de 12 bytes, pois a variavel por ser do tipo int consome 4 bytes e o ponteiro independente do tipo sempre vai consumir 8 bytes em compiladores 64 bits
+
+18) CÓDIGO EM ARQUIVO SEPARADO
+
+19) Apresente que tipo de informações são alocadas nas seguintes áreas da memória: 
+a)  Stack - espaço da memoria aonde é definido as variaveis locais
+b)  Heap - espaço da memoria em que as variaveis são executadas
+c) Executable Instructions - local da memoria em que o programa é executado
+d)  Static Variable / Automatic Variable - é o local da memoria em que as variaveis globais e funções são definidas
+
+20) Um código em linguagem C possui uma variável do tipo char identificada por s de tamanho 10 com o conteúdo “Moreno” e uma segunda variável de (ponteiro do tipo char), identificada por ptr, fazendo referência à variável s. Considerando que a variável ptr possua o valor 0060FF10, qual será  o  valor  apresentado ao usuário ao executar o comando printf("%p \n",&s[2]);? Justifique sua resposta.
+R: Sera exibido o endereço de memoria 0060FF12, pois a variavel do tipo char ocupa 1 byte por elemento, para sabermos o endereço de memoria de s[2] devemos passar 2 bytes do endereço inicial
+
+21) Analisando  o  código  abaixo  desenvolvido  em  linguagem  C,  apresente  o  resultado  que  será apresentado ao usuário após sua execução. Justifique sua resposta.
+R: Sera exibido o valor de n1 = 30 e n2 = 10
+
+22) Analisando  o  código  abaixo  desenvolvido  em  linguagem  C,  muito  semelhante  ao  anterior,  apresente  o  resultado  que  será  apresentado  ao  usuário  após  sua  execução.  Justifique  sua  resposta.
+R: Os valores exibidos continuaram a ser n1 = 30 e n2 = 10, porém agora os valores serão transferidos atraves de endereços de memorias por ponteiros
+
+23) Considerando  o  programa  abaixo,  implemente  um  procedimento  chamado  altera  que  receba como parâmetros um vetor (por referência) e seu tamanho (por valor). Este procedimento deverá  atualizar cada elemento do vetor atribuindo o dobro do seu valor.
+R: void altera(int a[], int tamanho){
+    for(int i = 0; i < tamanho; i++){
+        a[i] = a[i] * 2;
+    }
+}
+
+24) CÓDIGO EM ARQUIVO SEPARADO
+
+
+
+
+
+
+
+
+
+
