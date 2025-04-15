@@ -76,7 +76,18 @@ R: void altera(int a[], int tamanho){
 
 24) CÓDIGO EM ARQUIVO SEPARADO
 
+25) CÓDIGO EM ARQUIVO SEPARADO
 
+26) Já tinha feito direto dessa forma kkkkkk
+
+27) É possível utilizar um ponteiro para fazer referência a uma variável de struct? Se sim, apresente um exemplo.
+R: (*ptr).nome) ou ptr -> nome
+
+28) Defina o termo “ponteiro de ponteiro”
+R: Ponteiro de ponteiro é quando um ponteiro aponta para outro, por exemplo uma matriz, é um ponteiro (vetor linha) que aponta para outro ponteiro (vetor coluna)
+
+29) Considerando  o  programa  abaixo,  descreva  o  que  será  apresentado  ao  usuário  após  a execução completa do mesmo.
+R: Será apresentado o valor de X, do *ptr1 e **ptr2 = X, após a exibição do valores será exibido novamente o valor de X, em seguinda *ptr1 = X e o endereço de memoria de X, e por ultimo **ptr2 = X e o endereço de memoria de ptr2
 
 
 
