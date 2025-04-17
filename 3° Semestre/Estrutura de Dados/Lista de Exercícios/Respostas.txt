@@ -89,9 +89,13 @@ R: Ponteiro de ponteiro é quando um ponteiro aponta para outro, por exemplo uma
 29) Considerando  o  programa  abaixo,  descreva  o  que  será  apresentado  ao  usuário  após  a execução completa do mesmo.
 R: Será apresentado o valor de X, do *ptr1 e **ptr2 = X, após a exibição do valores será exibido novamente o valor de X, em seguinda *ptr1 = X e o endereço de memoria de X, e por ultimo **ptr2 = X e o endereço de memoria de ptr2
 
+30) Explique uma situação prática em que o uso de ponteiros em linguagem C é essencial ou traz vantagens em relação ao uso de variáveis comuns. Descreva o motivo da utilização de ponteiros nesse contexto
+R: O uso de ponteiros tras inumeras vantagens, quando utilizamos matrizes ou vetores muito grandes a sua utilização pode poupar muita memoria, evitando o desperdicio de memoria em que variaveis fixas ocupariam, dessa forma otimiza uso da memoria e velocidade do programa evitando as vezes laços indevidos.
 
+31) Considerando que uma função retorna apenas um único resultado, é possível retornar mais de um valor em uma função através dos parâmetros? Explique.
+R: Sim, uma função vai retornar apenas um valor, os parametros são "referencias" que você passa para a função poder executar e em que você espera um resultado da interação entre elas, porém com ponteiros podemos modificar e retornar mais de um valor
 
-
+32) 
 
 
 
