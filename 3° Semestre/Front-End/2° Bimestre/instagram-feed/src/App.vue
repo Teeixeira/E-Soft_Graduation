@@ -1,4 +1,8 @@
 <script>
+
+import PessoaItem from './pessoaItem.vue'
+
+
 export default {
   data() {
     return {

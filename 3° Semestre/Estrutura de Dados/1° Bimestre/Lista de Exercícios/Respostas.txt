@@ -95,8 +95,41 @@ R: O uso de ponteiros tras inumeras vantagens, quando utilizamos matrizes ou vet
 31) Considerando que uma função retorna apenas um único resultado, é possível retornar mais de um valor em uma função através dos parâmetros? Explique.
 R: Sim, uma função vai retornar apenas um valor, os parametros são "referencias" que você passa para a função poder executar e em que você espera um resultado da interação entre elas, porém com ponteiros podemos modificar e retornar mais de um valor
 
-32) 
+32) Conclua  o  programa  abaixo  desenvolvido  em  lin guagem  C  que  apresente  o  quádruplo  da variável a, utilizando o conceito de “ponteiro de ponteiro de ponteiro”.
+R: **c = a * 4; printf("Quaduplo de A: %d", c);
 
+33) CÓDIGO EM ARQUIVO SEPARADO
 
+34) CÓDIGO EM ARQUIVO SEPARADO
 
+35) O que significam as funções CALLOC, MALLOC e REALLOC?
+R: Calloc vai alocar memoria limpa sem nenhum lixo de memoria, já Malloc vai alocar memoria e dentro do endereço de memoria pode ter ou não lixo de memoria e por ultimo o Realloc vai realocar um espaço de memoria para maior ou para menor, no novo espaço alocado pode ter ou não lixo de memoria pois o Realloc não limpa a memopria como o Calloc por exemplo
 
+36) Qual é o objetivo da função FREE() e como devemos (sintaxe) utilizá-lo? 
+R: A função free() serve para liberarmos o espaço em que alocamos X variavel, sem isso a memoria nunca vai ser liberada e ao rodar o programa diversas vezes podemos ficar sem memoria disponivel, a sua sintaxe deve ser por meio simples "free(x)" ou por for dependendo se for ponteiro de ponteiro ou além, um for dentro de for para ponteiro
+
+37) Qual o objetivo de utilizarmos alocação dinâmica de memória? Explique.
+R: Otimizarmos o consumo de memoria do nosso programa e o tempo de resposta dele, evitando que memoria desnecessaria seja alocada e fazendo que o programa seja ainda mais pesado, em programas simples não iremos sentir tanto esse efeito, porém em programas mais robustos a alocação dinamica sera evidente o desempenho ganho
+
+38) Ao tentarmos alocar dinamicamente memória poderá não haver disponibilidade. Como resolver isso sem causar uma interrupção inesperada no programa?
+R: Após tentarmos alocar a memoria criamos um if (vetor != NULL) com a mensagem de alocação bem sucedida caso seja diferente de NULL e no "else" colocamos que caso seja igual a NULL irá aparecer uma mensagem que a alocação falhou por falta de espaço na memoria
+
+39) Como funciona e quais parâmetros são necessários para uma alocação dinâmica de memória utilizando o comando CALLOC? Explique.
+R: O calloc vai alocar memoria limpando todo o conteudo anterior presente na memoria, entregando memoria limpa para ser utilizada, sua forma de utilização será: variavel = calloc(quantidade, tamanho em bytes)
+
+40) Como funciona e quais parâmetros são necessários para uma alocação dinâmica de memória utilizando o comando MALLOC? Explique.
+R: Malloc irá alocar memoria, após a alocação o conteudo na memoria poderá conter ou não lixo de memoria, os parametros para utilizarmos será: variavel = malloc(tamanho * sizeof(int))
+
+41) Qual situação devemos utilizar a alocação CALLOC ou MALLOC? Explique
+R: Calloc iremos utilizar quando queremos que todos os endereços de memorias estejam com o seu conteudo zerado, por exemplo quando esperamos que o usuario preencha aqueles campos para que possamos apresentar para ele depois, imagina o cenario em que utilizamos malloc nesse caso e após o usuário inserir os dados no momento em que formos apresentar pra ele algum dado saia como "0f564fgeq", por isso utilizamos "Calloc", já o malloc podemos utilizar para quando for o sistema em que passara os valores para cada endereço de memoria posteriormente
+
+42) O que exatamente uma alocação dinâmica retorna, seja com CALLOC ou como MALLOC?
+R: Endereços de memoria, apresentando o primeiro endereço do bloco
+
+43) Quantos bytes de memória o retorno das funções CALLOC e MALLOC consumirão?
+R: vai depender da quantidade de elementos e tipo de variavel em que passamos para o Malloc ou Calloc, caso seja por exemplo malloc(10 * sizeof(int)) sabemos que será 40 bytes
+
+44) O bloco de memória alocado pela função MALLOC poderá conter lixo. Explique como isso pode acontecer.
+R: Sim, o bloco de memoria alocado por Malloc poderá conter lixo, pois ele só separa a memoria para a variavel utilizar, ele não faz a limpeza como o Calloc, após o Malloc fazer a alocação não conseguimos ter certeza de que havera ou não lixo de memoria nos endereços
+
+45) CÓDIGO EM ARQUIVO SEPARADO
