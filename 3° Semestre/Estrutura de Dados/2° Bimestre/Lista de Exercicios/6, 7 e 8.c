@@ -1,18 +1,19 @@
 /* 6. Desenvolva um programa denominado PILHA1 em linguagem C que implemente as operações de uma 
 pilha (pop, push e imprimir) cujo nó deverá conter nome[30] e idade. 
  
-7. Com base no exercício anterior (PILHA1), construa uma função que retorne a quantidade de elementos na pilha. 
- 
+7. Com base no exercício anterior (PILHA1), construa uma função que retorne a quantidade de elementos 
+na pilha. 
+
 8. Ainda com base no programa PILHA1, faça a alteração onde o campo nome deverá ter tamanho dinâmico. */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <locale.h>
+#include <string.h>
 
 int op;
 
 typedef struct apelido_pessoa{
-    char nome [30];
+    char *nome;
     int idade;
     struct apelido_pessoa *proximo;
 } pessoa;
@@ -23,7 +24,7 @@ void empilhar(pessoa p);
 void desempilhar();
 void liberarpilha();
 void mostrar_pilha();
-void quantidade();
+void quantidade(pessoa *topo);
 pessoa entradadados();
 
 int main (){
@@ -31,7 +32,7 @@ int main (){
     pessoa pessoas;
 
     do {
-    printf("\nEscolha uma das operacoes:\nEmpilhar = 1\nDesempilhar = 2\nLimpar Memoria = 3\nImprimir = 4\nEncerrar = 5\n");
+    printf("\nEscolha uma das operacoes:\nEmpilhar = 1\nDesempilhar = 2\nLimpar Memoria = 3\nImprimir = 4\nQuant de pessoas = 5\nEncerrar = 6\n");
     scanf("%d",&op);
     fflush(stdin);
 
@@ -50,12 +51,15 @@ int main (){
             mostrar_pilha();
             break;
         case 5:
+            quantidade(top);
+            break;
+        case 6:
             break;
         default:
             printf("Opcao invalida");
     }
 
-    } while (op != 5);
+    } while (op != 6);
 
     liberarpilha();
 
@@ -85,6 +89,7 @@ void desempilhar () {
         temp = top;
         top = top -> proximo;
         printf("\nPessoa %s removida da pilha!\n\n", temp->nome);
+        free(temp -> nome);
         free(temp);
     }
 }
@@ -98,10 +103,14 @@ void liberarpilha() {
 
 pessoa entradadados(){
     pessoa pes;
+    char nometemp[50];
 
     printf("\nCadastro de Pessoa:\n");
     printf("Nome: ");
-    scanf("%s",pes.nome);
+    scanf("%s",nometemp);
+    pes.nome = malloc(strlen(nometemp) + 1);
+    strcpy(pes.nome, nometemp);
+
     fflush(stdin);
     printf("Idade: ");
     scanf("%d",&pes.idade);
@@ -126,6 +135,12 @@ void mostrar_pilha() {
     }
 }
 
-void quantidade(){
-
+void quantidade(pessoa *topo){
+    int count = 0;
+    pessoa *atual = topo;
+    while (atual != NULL){
+        count ++;
+        atual = atual -> proximo;
+    }
+    printf("\nQuantidade de pessoas na pilha: %d\n", count);
 }
