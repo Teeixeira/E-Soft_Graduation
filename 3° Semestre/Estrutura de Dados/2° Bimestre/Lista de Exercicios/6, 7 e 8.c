@@ -9,39 +9,57 @@ pilha (pop, push e imprimir) cujo nó deverá conter nome[30] e idade.
 #include <stdlib.h>
 #include <locale.h>
 
-short int op;
+int op;
 
 typedef struct apelido_pessoa{
     char nome [30];
-    short int idade;
+    int idade;
     struct apelido_pessoa *proximo;
 } pessoa;
 
 pessoa *top = NULL;
 
-void operacao();
-void empilhar();
+void empilhar(pessoa p);
 void desempilhar();
+void liberarpilha();
 void mostrar_pilha();
-
+void quantidade();
+pessoa entradadados();
 
 int main (){
 
+    pessoa pessoas;
+
     do {
-    printf("Escolhar uma das operacoes:\nEmpilhar = 1\nDesempilhar = 2\nImprimir = 3\nEncerrar = 4\n");
+    printf("\nEscolha uma das operacoes:\nEmpilhar = 1\nDesempilhar = 2\nLimpar Memoria = 3\nImprimir = 4\nEncerrar = 5\n");
     scanf("%d",&op);
     fflush(stdin);
 
     switch (op) {
-    case 1:
-        
-        break;
-    
-    default:
-        break;
+        case 1:
+            pessoas = entradadados();
+            empilhar(pessoas);
+            break;
+        case 2:
+            desempilhar();
+            break;
+        case 3:
+            liberarpilha();
+            break;    
+        case 4:
+            mostrar_pilha();
+            break;
+        case 5:
+            break;
+        default:
+            printf("Opcao invalida");
     }
 
-    } while (op != 4);
+    } while (op != 5);
+
+    liberarpilha();
+
+    printf("\nFim do programa.\n");
 
     return 0;
 }
@@ -53,20 +71,61 @@ void empilhar(pessoa p) {
         novo -> proximo = top;
         top = novo;
     } else {
-        printf("Nao foi possivel empilhar a pessoa!\n");
+        printf("\nNao foi possivel empilhar a pessoa!\n");
     }
 
-    printf("Pessoa %s empilhada com sucesso!\n", p.nome);
+    printf("\nPessoa %s empilhada com sucesso!\n", p.nome);
 }
 
 void desempilhar () {
     if(top == NULL){
-        printf("A pilha esta vazia!\n");
+        printf("\nA pilha esta vazia!\n");
     } else {
         pessoa *temp;
         temp = top;
         top = top -> proximo;
-        printf("Pessoa %s removida da pilha!\n\n", temp->nome);
+        printf("\nPessoa %s removida da pilha!\n\n", temp->nome);
         free(temp);
     }
+}
+
+void liberarpilha() {
+    while (top != NULL){
+        desempilhar();
+    }
+    printf("\nMemoria liberada com sucesso.\n");
+}
+
+pessoa entradadados(){
+    pessoa pes;
+
+    printf("\nCadastro de Pessoa:\n");
+    printf("Nome: ");
+    scanf("%s",pes.nome);
+    fflush(stdin);
+    printf("Idade: ");
+    scanf("%d",&pes.idade);
+
+    return pes;
+}
+
+void mostrar_pilha() {
+    if (top == NULL) {
+        printf("\nA pilha esta vazia!\n");
+        return;
+    }
+    pessoa *temp;
+    temp = top;
+
+    printf("\nMostrando Pilha...\n");
+
+    while (temp != NULL){
+        printf("Nome: %s\n", temp -> nome);
+        printf("Idade: %d\n", temp -> idade);
+        temp = temp -> proximo;
+    }
+}
+
+void quantidade(){
+
 }
