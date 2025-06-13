@@ -1,0 +1,45 @@
+1) Cite dois exemplos práticos de PILHA ao qual utilizamos no dia a dia na área computacional.
+R: Ctrl + Z e retroceder pagina no navegador
+
+2) Em  uma  pilha  necessitamos  definir  uma  variável  de  ponteiro  independente dos demais dados contidos no nó. Qual tipo deve ser o ponteiro e quanto ele consumirá de memória? Justifique sua resposta.
+R: Devemos atribuir o ponteiro ao tipo da struct, pois dentro da struct pode ter varios tipos primitidos de dados, quanto ao consumo de memoria será 4 bytes para compiladores 32bits ou 8 bytes para compiladores 64bits
+
+3) Quais as possíveis operações que podemos efetuar em uma pilha? Explique.
+R: Em pilha podemos efetuar push() que é para empilhar e pop() para desempilhar
+
+4) Em  uma  pilha,  o  que  acontece  se  atribuirmos  NULL  para  o  ponteiro  que aponta para o topo da pilha?
+R: Estaremos dizendo que ali sera o topo da pilha e que não existe nenhum dado acima dele, ou proximo
+
+5) Analise e apresente as diferenças entre um vetor estático, um vetor dinâmico e uma lista simplesmente encadeada.
+R: Um vetor estatico tera sempre a quantidade de elementos que definimos ao incializar ele, o vetor dinamico já é algo variavel em que podemos diminuir ou aumentar o seu tamanho durante a execução do código, já para a lista simplesmente encadeada podemos inserir o elemento no inicio ou no final dela, onde teremos um ponteiro que aponta para o proximo elemento
+
+10) Dada a sequência de operações abaixo, indique o conteúdo final da pilha (do topo para a base), supondo que ela se inicie vazia: push('A'), push('B'), pop(), push('C'), push('D'), pop(), pop(), push('E'). 
+R: Conteudo final da pilha será "E" -> "A"
+
+11) Considere a pilha armazenada no vetor int S[5] = {3, 8, 2, 7, 1} com topo = 2 (ou seja, o elemento no índice 2 é o topo). Quais elementos ainda podem ser removidos  por  chamadas  sucessivas  de  pop  sem  provocar  underflow? Explique.
+R: Ainda podemos remover os elementos 2, 8 e 3, com isso liberamos a pilha por completo e não causamos underflow
+
+12) Como funciona as operações (inserção e remoção) em uma LISTA simplesmente encadeada?
+R: Levando em consideração que a inserção será no inicio da lista devemos atribuir o endereço de memoria do primeiro item da lista no ponteiro "proximo" do item que estamos inserindo, já para remoção, antes precisamos apontar o ponteiro de "proximo" do item anterior ao proximo item que estamos removendo , se não iremos quebrar a sequencia da lista
+
+13) Quais são as características de uma lista duplamente encadeada?
+R: A lista duplamente encadeada terá ponteiros de "anterior" e "proximo", indicando dois sentidos, o de percorrer a lista no sentido de proximo (indo) e o de anterior (voltando)
+
+14) Utilizando a linguagem c, apresente a estutura mínima de um nó em uma lista simplesmente encadeada.
+R: typedef struct apelido_no {
+    int elemento;
+    apelido_no *proximo;
+} no;
+
+15) Qual a diferença básica entre uma lista simplesmente encadeada e uma lista duplamente encadeada? Explique.
+R: a lista simplesmente encadeada seguirá apenas um sentido, quanto a duplamente encadeada terá dois sentindos, um ponteiro de indo e outro de voltando
+
+16) Apresente em linguagem C, apenas a estrutura do nó de uma lista circular
+R: typedef struct apelido_no {
+    int elemento;
+    apelido_no *anterior;
+    apelido_no *proximo
+} no;
+
+17) Analisando as estruturas acima,  explique a lógica implementada  na linha 5 da função buscar
+R: na linha 5, o while continuara a rodar enquanto a condição do o endereço de memoria do "aux" for diferente de NULL e valor de aux -> valor for diferente do valor procurado
