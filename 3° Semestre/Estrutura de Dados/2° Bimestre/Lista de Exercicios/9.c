@@ -29,12 +29,32 @@ int main () {
         if(novo){
             novo -> num = rand() % 100;
             novo -> prox = topo;
-            topo = novo -> prox;
+            topo = novo;
         } else {
             printf("\nNao foi possivel alocar memoria!\n");
         }
-        printf("\nNumero alocado com sucesso!\n");
+        printf("\nNumero alocado com sucesso!");
     }
+
+    printf("\n\nMostrando Pilha...\n\n");
+
+    if (topo == NULL) {
+        printf("\nA pilha esta vazia!\n");
+    } else {
+        numeros *temp = topo;
+        while(temp != NULL) {
+            printf("Numero: %d\n", temp -> num);
+            temp = temp -> prox;
+        }
+    }
+
+    while (topo != NULL){
+        numeros *temp = topo;
+        topo = topo->prox;
+        printf("\nNumero %d removido da pilha!", temp->num);
+        free(temp);
+    }
+    printf("\nMemoria liberada com sucesso.");
 
     return 0;
 }
