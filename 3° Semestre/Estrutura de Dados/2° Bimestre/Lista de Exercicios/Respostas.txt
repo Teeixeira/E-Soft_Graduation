@@ -43,3 +43,31 @@ R: typedef struct apelido_no {
 
 17) Analisando as estruturas acima,  explique a lógica implementada  na linha 5 da função buscar
 R: na linha 5, o while continuara a rodar enquanto a condição do o endereço de memoria do "aux" for diferente de NULL e valor de aux -> valor for diferente do valor procurado
+
+18) Analisando  o  código  abaixo,  apresente  exatamente  o  resultado  que  será apresentado ao usuário após a execução completa do programa.
+R: Será apresentado apenas o valor 10, pois apenas a primeira adição atende com sucesso a condição do while dentro da função inserirMeio
+
+19) Utilizando linguagem C, apresente apenas uma estrutura de exemplo de um nó de uma lista circular.
+R: typedef struct apelido_no{
+       int valor;
+       struct apelido_no  *anterior;
+       struct apelido_no  *proximo;
+   } No;
+
+20) Utilizando linguagem C, apresente apenas uma estrutura de exemplo de um nó de uma lista duplamente encadeada. 
+R: typedef struct apelido_no{
+       int valor;
+       struct apelido_no  *anterior;
+       struct apelido_no  *proximo;
+   } No;
+
+21) Apresente um exemplo do dia a dia na área computacional, do uso de LISTAS.
+R: Fila de reprodução de musicas, no spotify, youtube ou algum outro app, também algum editor de texto, que um elemento pode ser inserido em qualquer local
+
+22) Qual a principal diferença entre uma lista simplesmente encadeada e uma lista duplamente encadeada? Explique
+R: A principal diferença é que a simplesmente encadeada ela segue apenas um sentido, enquanto a lista duplamente encadeada segue dois, podendo ir e voltar por exemplo
+
+23) Considere uma lista simplesmente encadeada que contém os seguintes elementos: 10 → 20 → 30 → 40 → 50. Indique a sequência da lista após a lista receber NULL e a remoção do elemento 30, justificando sua resposta. 
+R: A sequencia será somente 10 -> 20, pois após remover o 30, que ele não será mais exibido, os demais elemente 40 e 50 serão pedidos, pois foi definido NULL para a sequeencia
+
+24) 
