@@ -70,4 +70,47 @@ R: A principal diferença é que a simplesmente encadeada ela segue apenas um se
 23) Considere uma lista simplesmente encadeada que contém os seguintes elementos: 10 → 20 → 30 → 40 → 50. Indique a sequência da lista após a lista receber NULL e a remoção do elemento 30, justificando sua resposta. 
 R: A sequencia será somente 10 -> 20, pois após remover o 30, que ele não será mais exibido, os demais elemente 40 e 50 serão pedidos, pois foi definido NULL para a sequeencia
 
-24) 
+24) A respeito de vazamento de memória, analise o código abaixo e desenvolva uma função denominada sair() que seja responsável por liberar corretamente toda a memória alocada dinamicamente antes da finalização do programa.
+R: void sair () {
+    while (top != NULL) {
+        desempilhar();
+    }
+}
+
+25) Apresente as características sobre de Listas Circulares, explicando o seu funcionamento.
+R: As lista circulares vão seguir o mesmo principio da lista duplamente encadeada, vai guardar o endereço de memoria do elemento anterior e do proximo, porem o primeiro item da lista vai guardar o endereço de memoria do ultimo elemento, e o ultimo elemento no seu endereço de *proximo vai apontar para o primeiro elemento da lista 
+
+26) Apresente três desenhos que representem graficamente:
+R: Fazer as mimagens no paint e anexar no documento
+
+27) Quais são as regras para inserção e remoção de elementos (nós) em uma lista?
+R: para inserir no inicio deve ser criado uam novo nó como "novo", apontar o seu endereço de *proximo para o proximo elemento da lista, para remover iremos armazenar o endereço de memoria em uma variavel temp e fazer a remoção
+para inserir no meio, criaremos o mesmo nó "novo", porem pegaremos o elemento anterior e vamos apontar o *proximo para o endereço de novo, e o *proximo de novo para o elemento em sequeencia, já para remover um elemento do meio da lista antes precisamos mudar o endeço de memoria que o *proximo do elemento anterior aponta para o elemento apos o que queremos remover
+para inserir no final, mudamos o endereço de *proximo do ultimo elemento de NULL para o endereço de memoria do novo, e para remover mudamos o endereço de memoria do penultimo elemento de *proximo para NULL, para dizer que ali é o final da lista
+
+28) Analise o código abaixo desenvolvido em linguagem C e apresente a representação gráfica (desenho da estrutura) após a execução completa do programa, inclusive sinalizando onde a variável *p estará apontando, bem como a que estrutura se refere (pilha, fila, lista simplesmente encadeada, lista duplamente encadeada ou lista circular).
+R: A apresentação final será 19 -> 8 -> 71, a principio foi identificado que se trata de uma lista simplesmente encadeada, pois estamos inserindo os elementos no inicio, e também conseguimos remover elementos do inicio, não pode ser pilha pois não estamos inserindo no topo e sim no inicio, e a variavel *p vai apontar para o endereço de memoria do 19, que indica o inicio da lista
+
+29) Como podemos determinar o tamanho de uma lista? Explique.
+R: para descobrirmos o tamanho da lista nos vamos precisar percorrer todos os elemento até encontrar o *proximo que aponte para NULL, e a cada elemento percorrido precisamos guardar a contagem em uma variavem count ++ por exemplo
+
+30) Crie uma função que verifica se um número é par ou ímpar. Em seguida, percorra a lista e, para cada nó, verifique se o valor é par ou ímpar. Caso seja par, insere em uma lista de números pares, caso contrário (ímpar), insere em uma lista de números ímpares.
+R: void par_ou_impar() {
+        NO *temp = lista;
+
+        while (temp != NULL) {
+            if (temp->num % 2 == 0)
+                inserir(&lista_pares, temp -> num);
+            else {
+                inserir(&lista_impares, temp -> num);
+            }
+            temp = temp->proximo;
+        }
+   }
+
+
+
+
+
+
+
