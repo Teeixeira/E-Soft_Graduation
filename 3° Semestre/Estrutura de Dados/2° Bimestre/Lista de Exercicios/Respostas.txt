@@ -13,6 +13,10 @@ R: Estaremos dizendo que ali sera o topo da pilha e que não existe nenhum dado 
 5) Analise e apresente as diferenças entre um vetor estático, um vetor dinâmico e uma lista simplesmente encadeada.
 R: Um vetor estatico tera sempre a quantidade de elementos que definimos ao incializar ele, o vetor dinamico já é algo variavel em que podemos diminuir ou aumentar o seu tamanho durante a execução do código, já para a lista simplesmente encadeada podemos inserir o elemento no inicio ou no final dela, onde teremos um ponteiro que aponta para o proximo elemento
 
+6, 7 e 8)
+
+9)
+
 10) Dada a sequência de operações abaixo, indique o conteúdo final da pilha (do topo para a base), supondo que ela se inicie vazia: push('A'), push('B'), pop(), push('C'), push('D'), pop(), pop(), push('E'). 
 R: Conteudo final da pilha será "E" -> "A"
 
@@ -107,6 +111,68 @@ R: void par_ou_impar() {
             temp = temp->proximo;
         }
    }
+
+31) Enunciado no PDF
+R: A variavel soma terá o valor final de 17, ela se inicializa com 0, ao remover o [5] da pilha o x recebe 5, e soma += soma + x é igual a 5, e ao remover o 12 depois de inserir ele na pilha x vai receber 12, e soma += soma + x é igual a 17, sendo esse o resultado final da variavel soma
+
+código base para executar o exercicio:
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct No {
+    int num;
+    struct No *proximo;
+} No;
+
+void push(No **topo, int valor) {
+    No *novo = malloc(sizeof(No));
+    if (novo == NULL) {
+        printf("Erro ao alocar memória\n");
+    }
+    novo -> num = valor;
+    novo -> proximo = *topo;
+    *topo = novo;
+}
+
+int pop(No **topo) {
+    if (*topo == NULL) {
+        printf("Erro: pilha vazia.\n");
+    }
+    No *temp = *topo;
+    int valor = temp -> num;
+    *topo = temp -> proximo;
+    free(temp);
+
+    return valor;
+}
+
+int main() {
+    No *pilha = NULL;
+    int x, soma = 0;
+
+    push(&pilha, 2);
+    push(&pilha, 4);
+    push(&pilha, 3);
+    push(&pilha, 5);
+
+    x = pop(&pilha);
+    soma += x;
+    x = 10;
+
+    push(&pilha, x);
+    x = 12;
+
+    push(&pilha, x);
+
+    x = pop(&pilha);
+
+    soma += x;
+
+    printf("Valor final da soma: %d\n", soma);
+
+    return 0;
+}
 
 
 
