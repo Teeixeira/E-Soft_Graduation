@@ -27,15 +27,15 @@ public class Main {
         int anoPublicacao[] = new int[3];
 
         for(int i = 0; i < 2; i++){
-            System.out.printf("Informe os dados do %d% livro:", i + 1);
+            System.out.printf("Informe os dados do %d° livro:", i + 1);
             System.out.print("Titulo: ");
             titulo[i] = scanner.nextLine();
             System.out.print("Autor: ");
             autor[i] = scanner.nextLine();
             System.out.print("Ano de publicação: ");
             anoPublicacao[i] = scanner.nextInt();
-        }
 
-        Pratica_01 livro  = new Pratica_01(titulo, autor, anoPublicacao);
+            Pratica_01 livro  = new Pratica_01(titulo[i], autor[i], anoPublicacao[i]);
+        }
     }
 }
