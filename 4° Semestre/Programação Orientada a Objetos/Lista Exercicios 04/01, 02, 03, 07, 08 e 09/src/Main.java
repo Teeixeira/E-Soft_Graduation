@@ -26,5 +26,9 @@ public class Main {
         turma.buscarAlunoPorRa("24159859-2");
 
         turma.getAlunoNaPosicao(0);
+
+        System.out.println("------- REMOVER ALUNO -------");
+
+        turma.removerAluno(1);
     }
 }

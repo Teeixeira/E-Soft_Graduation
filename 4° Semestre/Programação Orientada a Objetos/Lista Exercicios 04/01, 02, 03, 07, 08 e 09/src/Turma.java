@@ -38,6 +38,13 @@ public class Turma {
         System.out.printf("Indice %d: %s, RA %s\n", indice, alunos.get(indice).getNome(), alunos.get(indice).getRa());
     }
 
+    public void removerAluno(int indice){
+        System.out.printf("Aluno removido: %s, RA %s\n", alunos.get(indice).getNome(), alunos.get(indice).getRa());
+        qtdAlunos --;
+        this.alunos.remove(indice);
+        listarAlunos();
+    }
+
     public Integer getQtdAlunos() {
         return qtdAlunos;
     }
