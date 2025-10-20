@@ -1,0 +1,9 @@
+a) NotaFiscal e ItemDaNotaFiscal é composição, NotaFiscal tem vários ItemDaNotaFiscal e um item não é um tipo de nota fiscal
+
+b) Funcionario e Endereco é composição, Funcionario tem um Endereco e um endereço não é um tipo de funcionário
+
+c) IngressoVIP e Ingressoé herança, IngressoVIP é um tipo especial de Ingresso, com benefícios adicionais
+
+d) Pedido e Cliente é composição, Pedido tem um Cliente e um cliente não é um tipo de pedido.
+
+e) Carro e Pneu é composição, Carro tem vários Pneus e um pneu não é um tipo de carro.

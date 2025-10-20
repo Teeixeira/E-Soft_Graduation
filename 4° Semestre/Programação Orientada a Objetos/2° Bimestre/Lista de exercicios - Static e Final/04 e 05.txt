@@ -1,0 +1,10 @@
+4. preço (atributo comum / NÃO estático) é como o quarto de cada morador dentro de uma república,
+cada pessoa tem o seu quarto individual, com seus próprios itens e ninguém mais mexe ali, ou seja, cada objeto Produto tem seu próprio preço, guardado em um espaço diferente de memória.
+
+taxaImposto (atributo static / COMPARTILHADO) já o imposto é como um monumento que fica na praça central da cidade, não pertence a uma pessoa específica é público, todo mundo vê e usa a mesma referência.
+
+5. Regras do static
+
+não, porque this só existe quando temos um objeto específico criado na memória, algo que vem do new Produto, this.preco precisa de um objeto existente
+
+setTaxaImposto é static e existe mesmo sem nenhum objeto criado, pertence à classe e não a um objeto
