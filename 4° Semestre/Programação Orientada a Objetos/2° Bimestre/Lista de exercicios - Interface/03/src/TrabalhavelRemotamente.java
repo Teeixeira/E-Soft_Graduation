@@ -1,0 +1,3 @@
+interface TrabalhavelRemotamente {
+    void trabalharDeCasa();
+}

@@ -1,0 +1,18 @@
+public abstract class InstrumentoMusical {
+    public abstract void tocar();
+}
+public class Violao extends InstrumentoMusical {
+    @Override
+    public void tocar() {
+        System.out.println("Soando cordas de nylon...");
+    }
+}
+public class Piano extends InstrumentoMusical {
+    // A classe Piano tem um erro de compilação. Por quê?
+    public void afinar() {
+        System.out.println("Afinando o piano...");
+    }
+//     A classe piano está herdando o InstrumentoMusical porém como uma classe abstrata, ele precisa ter o
+//     metodo tocar, como não existe o metodo, o compilador exibe um erro
+
+}

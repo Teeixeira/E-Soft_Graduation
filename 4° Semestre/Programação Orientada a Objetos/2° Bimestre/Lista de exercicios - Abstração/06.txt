@@ -1,0 +1,16 @@
+public abstract class ProcessoJudicial { 
+    private int numeroProcesso;
+
+    public void iniciarProcesso() {
+        validarDocumentos();
+        distribuirParaVara();
+    }
+
+    // A classe PRECISA ser abstract porque este método é abstract (sem corpo),
+    // portanto, a classe não pode ser instanciada diretamente.
+    public abstract void validarDocumentos();  // esta linha obriga a classe a ser abstract
+
+    private void distribuirParaVara() {
+        // ... lógica comum ...
+    }
+}
