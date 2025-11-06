@@ -13,8 +13,6 @@ public class Produto {
         this.quantidade = quantidade;
     }
 
-
-
     public int getId() {
         return id;
     }
