@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //CASO DE USO 2 (For não segura):
+        //CASO DE USO 1 (For não segura):
         String sql = "CREATE TABLE IF NOT EXISTS autor (" +
                 "id INT AUTO_INCREMENT PRIMARY KEY," +
                 "nome VARCHAR(255) NOT NULL" +
