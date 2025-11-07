@@ -11,6 +11,10 @@ public class Main {
 
         List<Cliente> clientes = new ArrayList<Cliente>();
 
+        OperacoesBanco query = new OperacoesBanco();
+
+        query.criarTabela();
+
         do{
             int operacao;
             int proximoID = 1;
@@ -83,6 +87,19 @@ public class Main {
                         leitor.nextLine();
 
                         c.setTelefone(novoTelefone);
+                    }
+                }
+            }
+
+            if(operacao == 5){
+                System.out.println("===== Remover Cliente =====");
+                System.out.println("Digite o ID do cliente: ");
+                int id = leitor.nextInt();
+                leitor.nextLine();
+                for(Cliente c : clientes){
+                    if(c.getId() == id){
+                        clientes.remove(c);
+                        System.out.println("Cliente removido!");
                     }
                 }
             }
